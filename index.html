@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardik Narang — Banking & Finance · Valuation</title>
+<meta name="description" content="Hardik Narang — MBA (Banking & Finance) candidate at SSBF Pune with 35 months of hands-on property valuation experience.">
+<meta name="theme-color" content="#14213d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f4; --bg-2:#f2eee6; --card:#ffffff; --ink:#14213d; --muted:#5b6478;
+    --accent:#a97a2c; --accent-soft:rgba(169,122,44,.12); --line:rgba(20,33,61,.12);
+    --shadow:0 1px 2px rgba(20,33,61,.05), 0 12px 32px -12px rgba(20,33,61,.18);
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --radius:18px;
+  }
+  :root[data-theme="dark"]{
+    --bg:#0c1322; --bg-2:#101a2f; --card:#141f38; --ink:#eef0f6; --muted:#a3adc2;
+    --accent:#d8ac5e; --accent-soft:rgba(216,172,94,.14); --line:rgba(238,240,246,.12);
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 16px 40px -14px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.15}
+  .eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.4) blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:var(--serif);font-size:1.25rem;font-weight:600;display:flex;align-items:center;gap:10px}
+  .logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--bg);font-style:normal;font-size:.8rem;letter-spacing:.04em}
+  nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+  nav a.lnk{font-size:.9rem;color:var(--muted);position:relative;padding:4px 0;transition:color .2s}
+  nav a.lnk::after{content:"";position:absolute;left:0;bottom:-2px;height:1.5px;width:0;background:var(--accent);transition:width .25s}
+  nav a.lnk:hover,nav a.lnk.active{color:var(--ink)}
+  nav a.lnk:hover::after,nav a.lnk.active::after{width:100%}
+  .icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:transform .2s,border-color .2s}
+  .icon-btn:hover{transform:rotate(18deg);border-color:var(--accent)}
+  .icon-btn svg{width:18px;height:18px}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;padding:88px 0 72px}
+  .hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:640px;height:640px;border-radius:50%;
+    background:radial-gradient(closest-side,var(--accent-soft),transparent 70%);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;position:relative}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5rem);margin:18px 0 20px}
+  .hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
+  .lede{font-size:1.15rem;color:var(--muted);max-width:560px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:500;font-size:.95rem;border:1px solid var(--ink);transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+  .btn.primary{background:var(--ink);color:var(--bg)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn.ghost:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
+  .btn svg{width:16px;height:16px}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+  .pill{font-size:.8rem;padding:6px 13px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500;border:1px solid transparent}
+
+  .emblem{position:relative;aspect-ratio:1;max-width:360px;margin-inline:auto;width:100%}
+  .emblem .ring{position:absolute;inset:0;border-radius:50%;border:1px dashed var(--accent);opacity:.55;animation:spin 60s linear infinite}
+  .emblem .ring.two{inset:9%;border-style:solid;opacity:.25;animation-direction:reverse;animation-duration:90s}
+  .emblem .core{position:absolute;inset:18%;border-radius:50%;background:linear-gradient(145deg,var(--ink),#26396b);color:#fff;display:grid;place-items:center;box-shadow:var(--shadow)}
+  :root[data-theme="dark"] .emblem .core{background:linear-gradient(145deg,#1d2c52,#2d4380)}
+  .emblem .core span{font-family:var(--serif);font-size:clamp(3rem,8vw,5rem);font-style:italic;letter-spacing:.02em}
+  .chip{position:absolute;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:14px;padding:10px 14px;font-size:.78rem;line-height:1.3}
+  .chip b{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:600}
+  .chip.a{top:2%;right:-4%} .chip.b{bottom:8%;left:-6%}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);overflow:hidden}
+  .stat{padding:28px 24px;text-align:center;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .stat .n{font-family:var(--serif);font-size:2.6rem;font-weight:500;color:var(--ink)}
+  .stat .n small{font-size:1.2rem;color:var(--accent);margin-left:2px}
+  .stat p{font-size:.82rem;color:var(--muted);margin-top:2px}
+
+  /* SECTIONS */
+  section{padding:88px 0}
+  section.alt{background:var(--bg-2)}
+  .sec-head{margin-bottom:44px;max-width:640px}
+  .sec-head h2{font-size:clamp(2rem,4vw,2.9rem);margin-top:10px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+
+  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:32px}
+  .about blockquote{font-family:var(--serif);font-size:clamp(1.35rem,2.4vw,1.75rem);line-height:1.5;font-weight:400}
+  .about blockquote::before{content:"“";display:block;font-size:4rem;line-height:.6;color:var(--accent);margin-bottom:6px}
+  .facts{list-style:none;display:grid;gap:16px}
+  .facts li{display:flex;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:.95rem}
+  .facts li:last-child{border:0;padding:0}
+  .facts span{color:var(--muted)} .facts b{font-weight:500;text-align:right}
+
+  /* EXPERIENCE */
+  .exp-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:24px}
+  .exp-top h3{font-size:1.7rem}
+  .exp-top .org{color:var(--muted);margin-top:4px}
+  .dur{text-align:right;font-size:.9rem;color:var(--muted)}
+  .dur b{display:block;color:var(--accent);font-family:var(--serif);font-size:1.4rem;font-weight:600}
+  .bars{margin:6px 0 28px}
+  .bar{height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#e2bf80);border-radius:99px;transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+  .bar-l{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-top:8px}
+  .impact{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;list-style:none}
+  .impact li{position:relative;padding:16px 18px 16px 48px;border-radius:14px;background:var(--bg);border:1px solid var(--line);font-size:.93rem;transition:transform .25s,border-color .25s}
+  .impact li:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .impact li::before{content:"";position:absolute;left:18px;top:21px;width:14px;height:14px;border-radius:4px;background:var(--accent-soft);border:2px solid var(--accent);transform:rotate(45deg) scale(.7)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+  .tags span{font-size:.78rem;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+
+  /* EDUCATION */
+  .tl{position:relative;display:grid;gap:22px;padding-left:34px}
+  .tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:1.5px;background:linear-gradient(var(--accent),var(--line))}
+  .tl-item{position:relative;display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:center}
+  .tl-item::before{content:"";position:absolute;left:-34px;top:34px;width:17px;height:17px;border-radius:50%;background:var(--bg-2);border:2px solid var(--accent)}
+  .tl-item.now::before{background:var(--accent);box-shadow:0 0 0 6px var(--accent-soft)}
+  .tl-item h3{font-size:1.3rem}
+  .tl-item .where{color:var(--muted);font-size:.92rem;margin-top:4px}
+  .tl-item .yr{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .score{text-align:center;min-width:104px;padding:12px 16px;border-radius:14px;background:var(--bg);border:1px solid var(--line)}
+  .score b{display:block;font-family:var(--serif);font-size:1.5rem;font-weight:600}
+  .score small{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+  /* GRID LISTS */
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .cols h3{font-size:1.25rem;margin-bottom:18px}
+  .list{list-style:none;display:grid;gap:14px}
+  .list li{display:flex;gap:12px;justify-content:space-between;font-size:.92rem;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .list li:last-child{border:0;padding:0}
+  .list em{font-style:normal;color:var(--accent);font-weight:600;font-size:.8rem;white-space:nowrap;padding-top:2px}
+  .list small{display:block;color:var(--muted);font-size:.8rem}
+  .skill{margin-bottom:18px}
+  .skill .top{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:8px}
+  .mini-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .mini-tags span{padding:7px 14px;border-radius:12px;background:var(--bg);border:1px solid var(--line);font-size:.85rem}
+
+  /* CONTACT */
+  .contact{text-align:center;background:linear-gradient(145deg,#14213d,#223467);color:#f4f1ea;border-radius:28px;padding:72px 28px;position:relative;overflow:hidden}
+  .contact::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-120px;top:-160px;background:radial-gradient(closest-side,rgba(216,172,94,.28),transparent)}
+  .contact h2{font-size:clamp(2rem,4.5vw,3.2rem);margin:12px 0 14px;position:relative}
+  .contact p{color:#c4cade;max-width:520px;margin:0 auto 32px;position:relative}
+  .contact .eyebrow{color:#e2bf80;position:relative}
+  .contact .cta{justify-content:center;position:relative}
+  .contact .btn{border-color:#f4f1ea;color:#f4f1ea}
+  .contact .btn.primary{background:#f4f1ea;color:#14213d}
+  .contact .btn.ghost:hover{background:#f4f1ea;color:#14213d}
+  .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px;margin-top:34px;font-size:.88rem;color:#c4cade;position:relative}
+
+  footer{padding:32px 0 48px;text-align:center;color:var(--muted);font-size:.83rem}
+
+  /* REVEAL */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+  @media (max-width:900px){
+    .hero-grid,.about,.cols{grid-template-columns:1fr}
+    .emblem{max-width:280px;order:-1}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(2){border-right:0}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .impact{grid-template-columns:1fr}
+  }
+  @media (max-width:700px){
+    nav ul li:not(:last-child){display:none}
+    .hero{padding-top:56px} section{padding:64px 0}
+    .tl-item{grid-template-columns:1fr}
+    .score{justify-self:start;display:flex;gap:10px;align-items:baseline;min-width:0}
+    .dur{text-align:left}
+    .chip.a{right:0}.chip.b{left:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .rv{opacity:1;transform:none}
+  }
+  @media print{
+    header.nav,.icon-btn,.emblem,.cta,.btn{display:none!important}
+    body{background:#fff;color:#000} section{padding:24px 0} .rv{opacity:1;transform:none}
+    .card,.stats{box-shadow:none} .contact{background:#fff;color:#000;border:1px solid #ccc} .contact p,.meta{color:#333}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo"><i>HN</i> Hardik Narang</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="lnk" href="#about">About</a></li>
+        <li><a class="lnk" href="#experience">Experience</a></li>
+        <li><a class="lnk" href="#education">Education</a></li>
+        <li><a class="lnk" href="#credentials">Credentials</a></li>
+        <li><a class="lnk" href="#contact">Contact</a></li>
+        <li>
+          <button class="icon-btn" id="theme" aria-label="Toggle colour theme" title="Toggle theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom:72px">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow rv">MBA Candidate · Banking &amp; Finance</span>
+        <h1 class="rv d1">Numbers with <em>judgement</em>,<br>reports with rigour.</h1>
+        <p class="lede rv d2">I'm Hardik Narang — a finance graduate with 35 months of live property-valuation experience, now pursuing my MBA at the Symbiosis School of Banking &amp; Finance, Pune.</p>
+        <div class="cta rv d3">
+          <a class="btn primary" href="mailto:hardik.narang.26-28@ssbf.edu.in">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Get in touch
+          </a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/hardiknarang" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.13v5.82h-4v-5.16c0-1.23-.02-2.82-1.72-2.82-1.72 0-1.98 1.34-1.98 2.73v5.25h-4z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="badge-row rv d3">
+          <span class="pill">Property Valuation</span>
+          <span class="pill">Advanced Excel</span>
+          <span class="pill">Risk &amp; Compliance</span>
+        </div>
+      </div>
+
+      <div class="emblem rv d2" aria-hidden="true">
+        <div class="ring"></div><div class="ring two"></div>
+        <div class="core"><span>HN</span></div>
+        <div class="chip a"><b>SSBF Pune</b>MBA · 2026–28</div>
+        <div class="chip b"><b>35 months</b>Live valuation work</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap rv">
+    <div class="stats">
+      <div class="stat"><div class="n"><span data-count="35">35</span><small>mo</small></div><p>Valuation experience</p></div>
+      <div class="stat"><div class="n"><span data-count="8.19" data-dec="2">8.19</span></div><p>B.Com (Hons.) CGPA · DU</p></div>
+      <div class="stat"><div class="n"><span data-count="90.33" data-dec="2">90.33</span><small>%</small></div><p>Class XII · CBSE</p></div>
+      <div class="stat"><div class="n"><span data-count="3">3</span></div><p>Finance certifications</p></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">About</span><h2>What drives me</h2></div>
+      <div class="about">
+        <div class="card rv">
+          <blockquote>Enthusiastic about environments that challenge and inspire growth. Driven to build solutions through collaboration, innovation, and accountability — and to make a meaningful impact while evolving alongside top talent.</blockquote>
+        </div>
+        <div class="card rv d1">
+          <ul class="facts">
+            <li><span>Currently</span><b>MBA, Banking &amp; Finance</b></li>
+            <li><span>Previously</span><b>Valuation Trainee</b></li>
+            <li><span>Based in</span><b>Rohtak, Haryana</b></li>
+            <li><span>Languages</span><b>English · Hindi</b></li>
+            <li><span>Beyond work</span><b>Gardening · Travel · Volunteering</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="alt">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">Experience</span><h2>Live valuation, from the ground up</h2></div>
+      <article class="card rv">
+        <div class="exp-top">
+          <div>
+            <h3>Valuation Trainee</h3>
+            <p class="org">K. K. Narang Valuer · Rohtak</p>
+          </div>
+          <div class="dur"><b>35 months</b>01 Jun 2023 – 15 May 2026</div>
+        </div>
+        <div class="bars" aria-hidden="true">
+          <div class="bar"><i data-w="100"></i></div>
+          <div class="bar-l"><span>Jun 2023</span><span>May 2026</span></div>
+        </div>
+        <ul class="impact">
+          <li>Assisted in live valuation assignments for residential and commercial properties.</li>
+          <li>Performed Excel-based valuation calculations and financial assessments.</li>
+          <li>Analysed construction costs, market trends and prevailing land rates to support valuation decisions.</li>
+          <li>Prepared draft valuation reports in line with banking and regulatory requirements.</li>
+          <li>Verified supporting documentation and maintained accuracy in valuation records.</li>
+          <li>Gained exposure to compliance-driven decision-making, risk assessment and professional reporting standards.</li>
+          <li>Collaborated on data collection, analysis and report preparation for valuation projects.</li>
+        </ul>
+        <div class="tags">
+          <span>Residential &amp; commercial</span><span>Excel modelling</span><span>Land-rate analysis</span><span>Banking-grade reports</span><span>Documentation</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">Education</span><h2>An academic path in finance</h2></div>
+      <div class="tl">
+        <div class="tl-item now card rv">
+          <div>
+            <div class="yr">2026 – 2028</div>
+            <h3>MBA — Banking &amp; Finance</h3>
+            <p class="where">Symbiosis School of Banking and Finance, Pune · Symbiosis International University</p>
+          </div>
+          <div class="score"><b>Pursuing</b><small>In progress</small></div>
+        </div>
+        <div class="tl-item card rv">
+          <div>
+            <div class="yr">2020 – 2023</div>
+            <h3>B.Com (Hons.)</h3>
+            <p class="where">Sri Aurobindo College (Evening), Malviya Nagar, Delhi · University of Delhi</p>
+          </div>
+          <div class="score"><b>8.19</b><small>CGPA</small></div>
+        </div>
+        <div class="tl-item card rv">
+          <div>
+            <div class="yr">2019 – 2020</div>
+            <h3>Class XII</h3>
+            <p class="where">Indus Public School, Delhi Road, Rohtak · CBSE</p>
+          </div>
+          <div class="score"><b>90.33%</b><small>Score</small></div>
+        </div>
+        <div class="tl-item card rv">
+          <div>
+            <div class="yr">2017 – 2018</div>
+            <h3>Class X</h3>
+            <p class="where">Indus Public School, Delhi Road, Rohtak · CBSE</p>
+          </div>
+          <div class="score"><b>87.50%</b><small>Score</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" class="alt">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">Credentials</span><h2>Learning, leading, giving back</h2></div>
+      <div class="cols">
+        <div class="card rv">
+          <h3>Certifications</h3>
+          <ul class="list">
+            <li><div>Finance for Non-Finance Professionals<small>Rice University · Coursera</small></div><em>2026</em></li>
+            <li><div>Impactful Workplace Communication for Career Launch<small>Coursera</small></div><em>2026</em></li>
+            <li><div>Financial Accounting: Foundations<small>University of Illinois Urbana-Champaign · Coursera</small></div><em>2026</em></li>
+          </ul>
+        </div>
+        <div class="card rv d1">
+          <h3>Extra-curriculars</h3>
+          <ul class="list">
+            <li><div>Member, Entrepreneurship Cell<small>SSBF, Pune</small></div><em>2026</em></li>
+            <li><div>Youth Empowerment Foundation<small>Internship certificate</small></div><em>2021</em></li>
+            <li><div>National Service Scheme (NSS)<small>Volunteer</small></div><em>2020</em></li>
+            <li><div>Merit-Based Scholarship<small>Academic excellence</small></div><em>2018</em></li>
+          </ul>
+        </div>
+        <div class="card rv d2">
+          <h3>Skills &amp; interests</h3>
+          <div class="skill">
+            <div class="top"><span>Advanced Excel</span><span style="color:var(--accent)">Core strength</span></div>
+            <div class="bar"><i data-w="92"></i></div>
+          </div>
+          <p class="eyebrow" style="margin:22px 0 12px">Languages</p>
+          <div class="mini-tags"><span>English</span><span>Hindi</span></div>
+          <p class="eyebrow" style="margin:22px 0 12px">Hobbies</p>
+          <div class="mini-tags"><span>Gardening</span><span>Travelling</span><span>Volunteering</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact rv">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's build something meaningful.</h2>
+        <p>Open to internships, projects and conversations in banking, finance and valuation. I'd love to hear from you.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:hardik.narang.26-28@ssbf.edu.in">Email me</a>
+          <a class="btn ghost" href="tel:+918930405091">+91 89304 05091</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/hardiknarang" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="meta"><span>hardik.narang.26-28@ssbf.edu.in</span><span>Rohtak, Haryana · Pune, Maharashtra</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Hardik Narang · SSBF Pune, Batch of 2026–2028</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  // Theme
+  var saved=null; try{saved=localStorage.getItem('hn-theme')}catch(e){}
+  var dark=saved? saved==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function apply(){root.setAttribute('data-theme',dark?'dark':'light')}
+  apply();
+  document.getElementById('theme').addEventListener('click',function(){
+    dark=!dark; apply(); try{localStorage.setItem('hn-theme',dark?'dark':'light')}catch(e){}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Counters
+  function count(el){
+    var end=parseFloat(el.dataset.count), dec=parseInt(el.dataset.dec||0,10);
+    if(reduce){el.textContent=end.toFixed(dec);return}
+    var t0=null,dur=1400;
+    (function step(t){
+      if(!t0)t0=t; var p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3);
+      el.textContent=(end*e).toFixed(dec);
+      if(p<1)requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  // Reveal + bars + counters
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      var el=en.target; el.classList.add('in');
+      el.querySelectorAll('[data-count]').forEach(count);
+      el.querySelectorAll('[data-w]').forEach(function(b){b.style.width=b.dataset.w+'%'});
+      io.unobserve(el);
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  // Active nav link
+  var links=[].slice.call(document.querySelectorAll('a.lnk'));
+  var so=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+en.target.id)});
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('section[id]').forEach(function(s){so.observe(s)});
+})();
+</script>
+</body>
+</html>
